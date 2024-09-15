@@ -1,6 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Enroll() {
+
+    const navigate = useNavigate();
+
     const [name, setName] = React.useState('');
     const [rollNumber, setRollNumber] = React.useState('');
     const [course, setCourse] = React.useState('');
@@ -15,8 +19,12 @@ export default function Enroll() {
         }
         
         // Action to be performed after clicking the button
-
+        console.log(name, rollNumber, course, year, section, file);
         alert("Enrolled Successfully");
+    }
+
+    const goHome = () => {
+        navigate('/');
     }
 
     return (
@@ -66,7 +74,7 @@ export default function Enroll() {
                                 <div className="card-actions">
                                     <button className="btn btn-info" onClick={btnClick}>Enroll Your Self</button>
                                 </div>
-                                    <button className="btn btn-info" onClick={btnClick}>Go Back To Home Page</button>
+                                    <button className="btn btn-info" onClick={goHome}>Go Back To Home Page</button>
                             </div>
                         </div>
                     </div>
