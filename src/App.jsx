@@ -25,9 +25,6 @@ function App() {
   return (
 
     <div>
-      <div className="navbar bg-primary text-primary-content">
-        <button className="btn btn-ghost text-xl">Smart Attendance Mannager</button>
-      </div>
 
       {!url &&
         <div className="flex card bg-base-100 w-full shadow-xl">
